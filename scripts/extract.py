@@ -2,7 +2,7 @@ import os
 from dotenv import load_dotenv
 import requests
 import pandas as pd
-from datetime import datetime, timedelta
+from datetime import datetime
 import logging
 
 # Chargement des variables d'environnement
@@ -45,15 +45,12 @@ def calculate_weather_score(weather_data: dict) -> dict:
     if not weather_data:
         return None
     
-    # Calcul des scores individuels
     temp_score = max(0, 100 - 5 * abs(weather_data['temperature'] - 25))
     rain_score = 100 - min(100, weather_data['pluie'] * 10)
     wind_score = 100 - min(100, weather_data['vent'] * 5)
     
-    # Score global pondéré
     global_score = 0.5 * temp_score + 0.3 * rain_score + 0.2 * wind_score
     
-    # Ajout des scores aux données
     weather_data.update({
         'score_meteo': round(global_score),
         'ideal_temp': 22 <= weather_data['temperature'] <= 28,
@@ -76,10 +73,11 @@ def analyze_cities(cities: list, api_key: str):
     
     if results:
         df = pd.DataFrame(results)
-        os.makedirs("weather_results", exist_ok=True)
-        df.to_csv(f"weather_results/analyse_meteo_{datetime.now().strftime('%Y%m%d')}.csv", index=False)
+        output_dir = "data/weather_results"
+        os.makedirs(output_dir, exist_ok=True)
+        output_path = f"{output_dir}/analyse_meteo_{datetime.now().strftime('%Y%m%d')}.csv"
+        df.to_csv(output_path, index=False)
         
-        # Affichage des meilleures villes
         best_cities = df.sort_values('score_meteo', ascending=False)
         print("\nMeilleures villes pour visiter aujourd'hui:")
         print(best_cities[['ville', 'score_meteo', 'temperature', 'pluie', 'vent']].head())

@@ -1,6 +1,0 @@
-ville,date,temperature,humidite,pluie,vent,description,score_meteo,ideal_temp,low_rain,low_wind
-Antananarivo,2025-07-04,11.98,100,0,4.63,nuageux,63,False,True,True
-Toamasina,2025-07-04,19.0,94,0,3.6,partiellement nuageux,81,False,True,True
-Mahajanga,2025-07-04,22.01,56,0,2.57,peu nuageux,90,True,True,True
-Antsirabe,2025-07-04,8.08,93,0,2.39,nuageux,55,False,True,True
-Antalaha,2025-07-04,19.31,82,0,3.01,peu nuageux,83,False,True,True
