@@ -1,7 +1,6 @@
 ville,date,temperature,humidite,pluie,vent,description,score_meteo,ideal_temp,low_rain,low_wind
-Antananarivo,2025-07-04,12.98,100,0,3.09,nuageux,67,False,True,True
+Antananarivo,2025-07-04,11.98,100,0,4.63,nuageux,63,False,True,True
 Toamasina,2025-07-04,19.0,94,0,3.6,partiellement nuageux,81,False,True,True
 Mahajanga,2025-07-04,22.01,56,0,2.57,peu nuageux,90,True,True,True
 Antsirabe,2025-07-04,8.08,93,0,2.39,nuageux,55,False,True,True
-Rome,2025-07-04,32.96,56,0,4.12,peu nuageux,76,False,True,True
-Lisbonne,2025-07-04,26.03,60,0,4.12,ciel dégagé,93,True,True,True
+Antalaha,2025-07-04,19.31,82,0,3.01,peu nuageux,83,False,True,True

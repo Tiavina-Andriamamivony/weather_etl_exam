@@ -86,7 +86,7 @@ def analyze_cities(cities: list, api_key: str):
 
 if __name__ == "__main__":
     API_KEY = os.getenv("OPENWEATHER_API_KEY")
-    VILLES = ["Antananarivo", "Toamasina", "Mahajanga", "Antsirabe", "Antalaha", "Lisbonne"]
+    VILLES = ["Antananarivo", "Toamasina", "Mahajanga", "Antsirabe", "Antalaha"]
 
     if not API_KEY:
         logging.error("La clé API OPENWEATHER_API_KEY n'est pas définie")
