@@ -137,21 +137,6 @@ Un **score météo** (0-100) calculé sur 3 critères :
 1. 🌡 Température idéale (22-28°C)
 2. 🌧 Faible pluie (<5mm)
 3. 💨 Vent modéré (<15 km/h)
-
-**Top 3 Périodes** :  
-| Ville | Meilleure Période | Score Moyen |
-|-------|-------------------|------------|
-| Antananarivo | Sept-Oct | 82 |
-| Toamasina | Avril-Mai | 78 |
-| Mahajanga | Toute l'année | 85 |
-
-**Conseils pratiques** :  
-- ✅ **À privilégier** : Septembre pour Antsirabe (peu de pluie)  
-- ⚠️ **À éviter** : Janvier à Toamasina (300+ mm de pluie)  
-- 🎒 **Équipement** : Prévoir un parapluie en Novembre  
-
-*Données confirmées par l'EDA sur 4 ans d'historique*
-
 ---
 
 ## **PowerBI**  
