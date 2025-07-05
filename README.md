@@ -155,14 +155,88 @@ Un **score météo** (0-100) calculé sur 3 critères :
 ---
 
 ## **PowerBI**  
-![Dashboard PowerBI](img/powerbi_screenshot.png)  
-*(Exemple de visuel à ajouter)*
+![alt text](image-2.png)
 
-**Fonctionnalités** :  
-- Filtrage interactif par ville/saison  
-- Cartographie des conditions optimales  
-- Alertes météo en temps réel  
+## **Explication des Diagrammes PowerBI**
 
+---
+
+### **Carte Choroplèthe (Heatmap Géographique)**
+
+**Données :**
+
+* `dim_villes[ville]` → localisation des villes
+* `facts_meteo[score_meteo]` → taille des bulles
+
+**Objectif :**
+
+* Visualiser rapidement les zones les plus favorables au séjour
+* Identifier les villes avec un climat plus adapté
+
+**Exemple :**
+
+* Mahajanga : bulle plus grande → meilleur score météo
+
+**Résolution de la problématique :**
+
+* Permet de choisir les zones géographiques optimales pour voyager
+
+---
+
+### **Matrice des Scores (Score\_meteo par Mois et Ville)**
+
+**Données :**
+
+* Colonnes = `dim_dates[mois]`
+* Lignes = `dim_villes[ville]`
+* Valeurs = `facts_meteo[score_meteo]` (moyenne par mois et ville)
+
+**Objectif :**
+
+* Comparer les périodes idéales par ville
+* Voir quels mois sont les plus favorables selon la destination
+
+**Exemple :**
+
+* Mahajanga : scores élevés sur plusieurs mois
+* Antsirabe : plus variable selon la saison
+
+**Résolution de la problématique :**
+
+* Permet de planifier la période de séjour par ville
+
+---
+
+### ** Bar Chart (Moyenne Score\_meteo par Ville)**
+
+**Données :**
+
+* Axe X = ville
+* Axe Y = moyenne `score_meteo`
+
+**Objectif :**
+
+* Comparer les villes entre elles sur la moyenne globale
+* Résumer les conditions sur l’année entière
+
+**Exemple :**
+
+* Mahajanga : la ville la plus favorable en moyenne
+* Antsirabe / Toamasina : scores plus faibles
+
+**Résolution de la problématique :**
+
+* Aide à choisir la destination si la période est flexible
+
+---
+
+## **Conclusion**
+
+Ces 3 diagrammes répondent ensemble à la question : *Quand et où partir pour avoir la meilleure météo à Madagascar ?*
+
+* **Carte** → Où
+* **Matrice** → Quand par ville
+* **Bar Chart** → Quelle ville en général
 ---
 
 
